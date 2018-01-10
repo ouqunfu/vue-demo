@@ -1,4 +1,5 @@
 'use strict'
+var webpack = require('webpack')
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
@@ -24,6 +25,8 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  plugins: [
+  ],
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -74,6 +77,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.css$/,
+        loader:'style-loader!css-loader',
+        include: [],
       }
     ]
   },
