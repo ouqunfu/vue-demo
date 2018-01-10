@@ -33,22 +33,22 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">主导航</li>
       <!-- 首页 dashboard -->
-      <li class='active'><a href="<?php echo Url::toRoute('index/index');?>"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
+      <li class='active'><a href="/"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
       <!--内容-->
-      <li class="treeview menu-open">
+      <li class="treeview">
         <a href="#"><i class="fa fa-list-alt"></i> <span>内容</span>
           <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('columns/list');?>">栏目管理</a></li>
-          <li><a href="<?php echo Url::toRoute('cato/list');?>">分类管理</a></li>
-          <li><a href="<?php echo Url::toRoute('subjects/list');?>">专题管理</a></li>
-          <li><a href="<?php echo Url::toRoute('contents/list');?>">内容管理</a></li>
-          <li><a href="<?php echo Url::toRoute('url-manage/list');?>">URL规则</a></li>
-          <li><a href="<?php echo Url::toRoute('gallery/list-dir');?>">图片库</a></li>
-          <li><a href="<?php echo Url::toRoute('tags/list');?>">标签管理</a></li>
+          <li><router-link to="/columns-list">栏目管理</router-link></li>
+          <li><a href="#cato-list">分类管理</a></li>
+          <li><a href="#subjects-list">专题管理</a></li>
+          <li><a href="#contents-list">内容管理</a></li>
+          <li><a href="#url-manage-list">URL规则</a></li>
+          <li><a href="#gallery-list-dir">图片库</a></li>
+          <li><a href="#tags-list">标签管理</a></li>
         </ul>
       </li>
       <!--用户-->
@@ -59,8 +59,8 @@
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('users/list');?>">用户管理</a></li>
-          <li><a href="<?php echo Url::toRoute('role/list');?>">角色管理</a></li>
+          <li><a href="#users-list">用户管理</a></li>
+          <li><a href="#role-list">角色管理</a></li>
         </ul>
       </li>
       <!--功能-->
@@ -71,10 +71,10 @@
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('notice/list-notice');?>">公告管理</a></li>
-          <li><a href="<?php echo Url::toRoute('notice/list-message');?>">留言管理</a></li>
-          <li><a href="<?php echo Url::toRoute('comments/list');?>">评论管理</a></li>
-          <li><a href="<?php echo Url::toRoute('data-manage/index');?>">数据管理</a></li>
+          <li><a href="#notice-list-notice">公告管理</a></li>
+          <li><a href="#notice-list-message">留言管理</a></li>
+          <li><a href="#comments-list">评论管理</a></li>
+          <li><a href="#data-manage-index">数据管理</a></li>
         </ul>
       </li>
       <!--营销-->
@@ -85,8 +85,8 @@
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('market/list-seo-rule');?>">SEO管理</a></li>
-          <li><a href="<?php echo Url::toRoute('market/list-links');?>">友链管理</a></li>
+          <li><a href="#market-list-seo-rule">SEO管理</a></li>
+          <li><a href="#market-list-links">友链管理</a></li>
         </ul>
       </li>
       <!--设置-->
@@ -97,10 +97,10 @@
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('settings/index');?>">网站配置</a></li>
-          <li><a href="<?php echo Url::toRoute('settings/watermark');?>">水印设置</a></li>
-          <li><a href="<?php echo Url::toRoute('settings/str-filter-list');?>">敏感词管理</a></li>
-          <li><a href="<?php echo Url::toRoute('settings/attachment');?>">附件设置</a></li>
+          <li><a href="#settings-index">网站配置</a></li>
+          <li><a href="#settings-watermark">水印设置</a></li>
+          <li><a href="#settings-str-filter-list">敏感词管理</a></li>
+          <li><a href="#settings-attachment">附件设置</a></li>
         </ul>
       </li>
       <!--自定义-->
@@ -111,8 +111,8 @@
               </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo Url::toRoute('customs/list-content-field');?>">内容字段</a></li>
-          <li><a href="<?php echo Url::toRoute('customs/list-user-field');?>">用户字段</a></li>
+          <li><a href="#customs-list-content-field">内容字段</a></li>
+          <li><a href="#customs-list-user-field">用户字段</a></li>
         </ul>
       </li>
     </ul>

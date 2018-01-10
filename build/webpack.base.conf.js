@@ -25,8 +25,9 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
-  plugins: [
-  ],
+  externals: {
+    'CKEDITOR': 'CKEDITOR'
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -80,8 +81,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader:'style-loader!css-loader',
-        include: [],
+        loader:'style-loader!css-loader'
       }
     ]
   },
